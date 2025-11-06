@@ -12,7 +12,7 @@ from io_live import (
     digital_servo_action 
 )
 
-API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDtK0ylNArH6mK60XTuKxHij89acTSkYQ0") 
+API_KEY = os.getenv("GEMINI_API_KEY", "API_KEY") 
 client = genai.Client(api_key=API_KEY)
 MODEL_NAME = "gemini-2.5-flash"
 
@@ -123,4 +123,5 @@ def main_assistant_loop():
         print("\n--- Conversation Ended. Returning to Face Monitoring. ---")
 
 if __name__ == "__main__":
+
     main_assistant_loop()
